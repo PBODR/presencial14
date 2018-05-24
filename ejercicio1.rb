@@ -16,12 +16,14 @@ a.map {|value| value.to_s }
 a.reject {|value| value < 5}
 #print a
 # 5. Utilizando select descartar todos los elementos mayores a 5 en el array.
-a.select! {|value| value > 5}
+#a.select! {|value| value > 5}
 #print a
 # 6. Utilizando inject obtener la suma de todos los elementos del array.
 a.inject{|sum,e| sum += e }
 #print a
 # 7. Utilizando group_by agrupar todos los números por paridad (si son pares, es un
 # grupos, si son impares es otro grupo).
+a.group_by {|i| i.even?}
 
 # 8. Utilizando group_by agrupar todos los números mayores y menores que 6.
+a.group_by {|i| i > 6}
